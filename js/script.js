@@ -39,15 +39,17 @@ link.setAttribute('title', 'Facebook-a get');
 //     img[0].src = "img/linux.png";
 // }
 
-var click = true;
+var click = 0;
 
 function sekliDeyis() {
-    if (click) {
+    click++;
+    if (click == 1) {
         document.getElementById('logo').setAttribute('src', 'img/linux.png');
-        click = false;
+    } else if (click == 2) {
+        document.getElementById('logo').setAttribute('src', 'img/nexus.jpg');
     } else {
         document.getElementById('logo').setAttribute('src', 'img/logo1.png');
-        click = true;
+        click = 0;
     }
 
 }
